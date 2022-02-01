@@ -9,9 +9,9 @@ days = time.time()
 
 os.path.exists(path)
 if(os.path.exists(path)==True):
-    os.walk(path)
+    for filename in os.walk(path):
 
-os.path.join(path)
-ctime = os.stat(path).st_ctime
-os.remove(path)
-shutil.rmtree(path)
+        os.path.join(path)
+        ctime = os.stat(path).st_ctime
+        os.remove(path)
+        shutil.rmtree(path)
